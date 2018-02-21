@@ -18,17 +18,14 @@ int hourglass_sum(int *arr)
 		
 			if (sum > max) {
 				max = sum;
-				printf("i=%d, j=%d, sum = %d, max=%d\n", i, j, sum, max);
 			}
 		}
 	}
-	printf("\n");
 	return max;
 }
 
-#if 1
 Test(basicTests, should_pass_all_the_tests_provided) {
-/*
+
 	int array1[] = { 1,1,1,0,0,0,
 			 0,1,0,0,0,0,
 			 1,1,1,0,0,0,
@@ -58,7 +55,7 @@ Test(basicTests, should_pass_all_the_tests_provided) {
 	int ans3 = 13;
 	int sum3 = hourglass_sum(array3);
 	cr_expect_eq(ans3, sum3, "Expected: '%d' But actual: '%d'", ans3, sum3);
-*/
+
 	int array4[] = { 0, -4, -6, 0, -7, -6,
 			-1, -2, -6, -8, -3, -1,
 			-8, -4, -2, -8, -8,-6,
@@ -79,28 +76,3 @@ Test(basicTests, should_pass_all_the_tests_provided) {
 	int sum5 = hourglass_sum(array5);
 	cr_expect_eq(ans5, sum5, "Expected: '%d' But actual: '%d'", ans5, sum5);
 }
-#endif 
-#if 0
-int main()
-{
-	int arr[6][6] = {     1,1,1,0,0,0,
-			  0,1,0,0,0,0,
-			  1,1,1,0,0,0,
-			  0,0,2,4,4,0,
-			  0,0,0,2,0,0,
-			  0,0,1,2,4,0 };
-	int i, j;	
-/*
-	for (arr_i = 0; arr_i < 6; arr_i++) {
-		for (j = 0; j < 6; j++) {         
-			scanf("%d",&arr[i][j]);
-		}
-	}
-*/
-	i = hourglass_sum(arr);
-	printf("%d\n", i);
-
-
-	return 0;
-}
-#endif 
